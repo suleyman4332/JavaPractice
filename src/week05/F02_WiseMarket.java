@@ -46,7 +46,7 @@ public class F02_WiseMarket {
                 sarkuteri();
                 break;
                 case 3:
-                   // market();
+                    market();
                     break;
                 case 4:
                     //fisYazdir();
@@ -146,6 +146,56 @@ public static void manav(){
         }
     }
 }
+private static void market(){
+    System.out.println("almak istediğiniz ürünü seçiniz : \n10- Nutella 85€\n11-Çay 70€ \n12 Şeker 20€\n13 Güllaç 45€ \n14 Un 53€ ");
+    while (!ekUrun){
+        urunKodu=scan.nextInt();
+        if (urunKodu>=10&&urunKodu<=14){
+            System.out.println("Kaç paket alacaksınız");
+            urunAdedi=scan.nextInt();
+            switch (urunKodu) {
+                case 10:
+                    urunAdi = "Nutella 750 g";
+                    urunFiyati = 85;
+                    System.out.println(urunAdedi + "adet" + (urunFiyati * urunAdedi) + "tl dir");
+                    break;
+                case 11:
+                    urunAdi = "Cay ";
+                    urunFiyati = 70;
+                    System.out.println(urunAdedi + "adet" + (urunFiyati * urunAdedi) + "tl dir");
+                    break;
+                case 12:
+                    urunAdi = "Seker";
+                    urunFiyati = 20;
+                    System.out.println(urunAdedi + "adet" + (urunFiyati * urunAdedi) + "tl dir");
+                    break;
+                case 13:
+                    urunAdi = "Güllaç";
+                    urunFiyati = 45;
+                    System.out.println(urunAdedi + "adet" + (urunFiyati * urunAdedi) + "tl dir");
+                    break;
+                case 14:
+                    urunAdi = "Un";
+                    urunFiyati = 53;
+                    System.out.println(urunAdedi + "adet" + (urunFiyati * urunAdedi) + "tl dir");
+                    break;
+            }
+                urunFiyati=urunFiyati*urunAdedi;
+                toplam+=urunFiyati;
+                System.out.println("oluşan sepet miktari: "+toplam);
+                sepet+=urunAdi+" :"+urunFiyati+"tl dir";
+                System.out.println("baska ürün almak istermisiniz ?");
+
+
+            } else if (urunKodu==0) {
+            girisEkrani();
+
+        }
+    }
+    }
+
+
 }
+
 
 
